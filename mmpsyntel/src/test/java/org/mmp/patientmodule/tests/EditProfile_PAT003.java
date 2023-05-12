@@ -1,5 +1,6 @@
 package org.mmp.patientmodule.tests;
 
+import org.mmp.patientmodule.pages.EditProfilePage;
 import org.mmp.util.BaseClass;
 import org.mmp.util.MMPLibrary;
 import org.openqa.selenium.By;
@@ -21,10 +22,11 @@ public class EditProfile_PAT003 extends BaseClass{
 		 
 		MMPLibrary mmpLib = new MMPLibrary(driver);
 		mmpLib.login(username,password); 
-		driver.findElement(By.xpath("//span[contains(text(),'Profile')]")).click();
+		mmpLib.navigateToAModule("Profile");
 		SoftAssert sa = new SoftAssert();
-		sa.assertTrue(Boolean.parseBoolean(driver.findElement(By.id("fname")).getAttribute("readonly")));
-		sa.assertTrue(Boolean.parseBoolean(driver.findElement(By.id("lname")).getAttribute("readonly")));
+		EditProfilePage editProfile = new EditProfilePage(driver);
+		sa.assertTrue(editProfile.readFNameAttribute());
+		sa.assertTrue(editProfile.readLNameAttribute());
 		sa.assertAll();
 		 
 	}

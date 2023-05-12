@@ -24,4 +24,9 @@ public class MMPLibrary {
 	{
 		driver.get(url);
 	}
+	public void navigateToAModule(String moduleName)
+	{
+		 //"+var+"
+		driver.findElement(By.xpath("//span[contains(text(),'"+moduleName+"')]")).click();
+	}
 }
