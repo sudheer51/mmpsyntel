@@ -3,15 +3,9 @@ package org.mmp.patientmodule.tests;
 import org.mmp.patientmodule.pages.EditProfilePage;
 import org.mmp.util.BaseClass;
 import org.mmp.util.MMPLibrary;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class EditProfile_PAT003 extends BaseClass{
 
