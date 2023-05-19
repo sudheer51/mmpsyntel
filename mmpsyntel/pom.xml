@@ -43,7 +43,7 @@
 				<version>3.1.0</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>ScheduledAppointmenTests.xml</suiteXmlFile>
+						<suiteXmlFile>ScheduledAppointmentTests.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
