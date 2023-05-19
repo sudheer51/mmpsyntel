@@ -12,10 +12,3 @@
     </classes>
   </test>  
 </suite> <!-- Suite -->
-<!-- 
-
-  <methods>
-        <include name="TC_003_login_invalid_creds" />
-      </methods>
-
- -->
