@@ -22,7 +22,10 @@ public class EditProfile_PAT003 extends BaseClass{
 		sa.assertTrue(editProfile.readFNameAttribute());
 		sa.assertTrue(editProfile.readLNameAttribute());
 		sa.assertAll();
-		 
+		
+		driver.navigate();
+		
+		
 	}
 
 }
