@@ -12,12 +12,12 @@ public class MMPLibrary {
 		 
 	}
 	
-	public void login(String username,String password)
+	public void login(String username,String password,String url)
 	{
-		driver.get("http://96.84.175.78/MMP-Release2-Integrated-Build.6.8.000/portal/login.php");
+		driver.get(url);
 		driver.findElement(By.id("username")).sendKeys(username);
 		driver.findElement(By.id("password")).sendKeys(password);
-		driver.findElement(By.name("submit")).click();	
+		driver.findElement(By.cssSelector("input[value='Sign In']")).click();	
 		
 	}
 	public void launchApplication(String url)

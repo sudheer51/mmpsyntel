@@ -23,7 +23,7 @@ public class LoginTests_PAT002 extends BaseClass{
 	{
 	 
 		MMPLibrary mmpLib = new MMPLibrary(driver);
-		mmpLib.login(username,password);
+		mmpLib.login(username,password,pro.getProperty("patientURL"));
 		String expectedResult="Patient Portal";
 		String actualResult= driver.findElement(By.xpath("//h3[normalize-space()='Patient Portal']")).getText();
 		Assert.assertEquals(actualResult, expectedResult);
@@ -34,7 +34,7 @@ public class LoginTests_PAT002 extends BaseClass{
 	{
 		 
 		MMPLibrary mmpLib = new MMPLibrary(driver);
-		mmpLib.login(username,password);
+		mmpLib.login(username,password,pro.getProperty("patientURL"));
 		SoftAssert sa = new SoftAssert();
 		String expectedtab1="HOME";
 		String actualTab1=driver.findElement(By.xpath("//span[contains(text(),'HOME')]")).getText();
@@ -52,7 +52,7 @@ public class LoginTests_PAT002 extends BaseClass{
 	{
 		 
 		MMPLibrary mmpLib = new MMPLibrary(driver);
-		mmpLib.login(username,invpassword);
+		mmpLib.login(username,invpassword,pro.getProperty("patientURL"));
 		String expectedResult="Wrong username and password.";
 		Alert alrt = driver.switchTo().alert();
 		String actualResult= alrt.getText().trim();
@@ -64,7 +64,7 @@ public class LoginTests_PAT002 extends BaseClass{
 	{
 	 
 		MMPLibrary mmpLib = new MMPLibrary(driver);
-		mmpLib.login(invusername,password);
+		mmpLib.login(invusername,password,pro.getProperty("patientURL"));
 		String expectedResult="Wrong username and password.";
 		Alert alrt = driver.switchTo().alert();
 		String actualResult= alrt.getText().trim();

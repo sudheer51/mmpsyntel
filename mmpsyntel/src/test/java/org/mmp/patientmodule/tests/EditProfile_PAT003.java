@@ -15,7 +15,7 @@ public class EditProfile_PAT003 extends BaseClass{
 	{
 		 
 		MMPLibrary mmpLib = new MMPLibrary(driver);
-		mmpLib.login(username,password); 
+		mmpLib.login(username,password,pro.getProperty("patientURL")); 
 		mmpLib.navigateToAModule("Profile");
 		SoftAssert sa = new SoftAssert();
 		EditProfilePage editProfile = new EditProfilePage(driver);

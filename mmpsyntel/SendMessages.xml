@@ -5,7 +5,7 @@
  <parameter name="password"  value="Ria12345"/>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="org.mmp.patientmodule.tests.SendMessage_PAT004">
+      <class name="org.mmp.adminmodule.tests.SendMessagesAdminTests_PAT004">
       </class>
     </classes>
   </test>  

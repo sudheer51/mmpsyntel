@@ -15,7 +15,7 @@ public class SendMessage_PAT004 extends BaseClass{
 	{
 	 
 		MMPLibrary mmpLib = new MMPLibrary(driver);
-		mmpLib.login(username,password);
+		mmpLib.login(username,password,pro.getProperty("patientURL"));
 		SendMessagesPage messagesPage = new SendMessagesPage(driver);
 		String actual = messagesPage.sendMessages("Monthly Visit", "Regular Checkup");
 		String expected="Messages Successfully sent.";

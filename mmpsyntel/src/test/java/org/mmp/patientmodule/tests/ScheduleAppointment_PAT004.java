@@ -12,7 +12,7 @@ public class ScheduleAppointment_PAT004 extends BaseClass{
 	public void validateBookAppointment(String username,String password)
 	{
 		MMPLibrary mmpLib = new MMPLibrary(driver);
-		mmpLib.login(username,password); 
+		mmpLib.login(username,password,pro.getProperty("patientURL")); 
 		ScheduleAppointmentPage sPage = new ScheduleAppointmentPage(driver);
 		sPage.bookAppointment("Beth",60,"10Am");
 	}
